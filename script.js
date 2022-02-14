@@ -1,9 +1,7 @@
 "use strict";
 
 const textEl = document.querySelector(".heading");
-console.log(textEl);
 const speedInputEl = document.querySelector(".box__input");
-console.log(speedInputEl);
 
 const text = `"Leo Messi" Is The Best Player In The World.`;
 let index = 1;
@@ -22,5 +20,7 @@ const write = function () {
 write();
 
 speedInputEl.addEventListener("input", (e) => {
-  speed = 300 / speedInputEl.value;
+  if (speedInputEl.value && speedInputEl.value <= 5) {
+    speed = 300 / speedInputEl.value;
+  }
 });
