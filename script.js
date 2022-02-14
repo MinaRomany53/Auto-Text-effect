@@ -20,7 +20,11 @@ const write = function () {
 write();
 
 speedInputEl.addEventListener("input", (e) => {
-  if (speedInputEl.value && speedInputEl.value <= 5) {
+  if (
+    speedInputEl.value &&
+    speedInputEl.value <= 5 &&
+    speedInputEl.value >= 1
+  ) {
     speed = 300 / speedInputEl.value;
   }
 });
